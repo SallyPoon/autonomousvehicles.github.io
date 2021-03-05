@@ -1,3 +1,3 @@
 layout: page
 title: "Odometry"
-permalink: /odometry/
+permalink: /about/odometry
