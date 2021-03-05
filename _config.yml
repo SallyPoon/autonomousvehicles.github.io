@@ -1,6 +1,13 @@
 theme: jekyll-theme-cayman
 
+topics: Topics
+tested:
 
-pages_list:
-  Odometry: 'odometry/'
-  IMU: 'imu/'
+- title: Odometry
+  url: https://sallypoon.github.io/autonomousvehicles.github.io/odometry/
+
+- title: IMU
+  url: https://sallypoon.github.io/autonomousvehicles.github.io/imu/
+
+
+
