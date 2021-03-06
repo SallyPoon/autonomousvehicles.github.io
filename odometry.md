@@ -95,6 +95,7 @@ After finding that the MushR tuning test was not accurate for our needs, we deci
 After seeing that it was not giving the right predicted values, we decided to look into the file that predicts the odometry values. By going into the vesc to odom topic, we were able to find that the equation to calculate the odometry value is:
 
 (data - steering to servo offset ) / steering to servo gain
+
 current angular velocity = current speed * tan(current steering angle) / wheelbase
 \newline
 
