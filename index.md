@@ -1,37 +1,14 @@
-## HELLLLOOO
+# Welcome to Autonomous Vehicles - Odometry and IMU!
+## Introduction
+When building systems for autonomous vehicle racing and driving, it is critical for the robot to localize itself within the environment it is navigating. Robot localization comprises of the robot being able to derive its current path and its heading for future motion estimation. Popular approaches often involve using GPS data solely and computer vision sensing. However, relying heavily on GPS coordinates or LiDar in open outdoor environments can lead to several issues. GPS is prone to lag and may be infeasible in harsher and unfamiliar terrain, resulting in loss of accuracy in tracking by failing to produce necessary positional information. Computer Vision approaches often depend heavily on training data and cannot always provide continouos and accurate orientation. Our problem investigates using IMU and Odometry sensors to aid in this mission by providing relevant data, position estimates, and vehicle heading in cases when GPS and other mapping are not reliable, or to supplement these approaches. IMU (Inertial  Measurement  Unit) provides linear acceleration, angular velocity, and magnetic force sensing ability through the use of accelorometers, gyroscopes, and occasionally magnetometers.  Wheel Odometry  also provide  useful  measurements  to  estimate the  position  of  the  car  through  the use of the wheel’s circumference and rotations per second. Together, these  sensors provide relevant and invaluable data that can be fused to obtain a primary heading and position estimate for the robot. Furthermore, these sensors can be fused with navigation and obstacle avoidance systems already in place to build more robust and accurate autonomous navigation models.
 
-You can use the [editor on GitHub](https://github.com/SallyPoon/autonomousvehicles.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 12
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SallyPoon/autonomousvehicles.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Goals
+- Understanding of IMU and Odometry Sensor to help with reliable navigation and place within robot ecosystem.
+- Guides for OLA Artemis IMU setup + calibration and Odometry tuning/analysis
+- Calibration procedure of IMU sensor to ensure reliable measurements 
+- Odometry derived position estimation
+- IMU derived Primary Heading estimate using fusion of accelerometer, gyroscope, and magnetometer readings
+- IMU and Odometry data ready to be easily ingested by other subteams through ROS using package standard and custom topics
+- IMU and Odometry data ready for fusion with GPS subteam within Kalman Filter if necessary for future advancement of robot localization
+- Integrating, calibrating, and testing IMU on the real robot
+- Tuning the car for accurate odometry readings
