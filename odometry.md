@@ -53,7 +53,7 @@ For the ERPM, we tried to find the best value for speed to erpm gain, which was 
 
 <figure>
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224451-8fed0e00-7e90-11eb-94f0-f8575fbc1452.png">
-  <figcaption>End Point for ERPM Calibration\</figcaption>
+  <figcaption>End Point for ERPM Calibration</figcaption>
 </figure>
 
 
