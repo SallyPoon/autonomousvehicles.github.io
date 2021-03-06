@@ -67,6 +67,6 @@ After this, if we got a distance that overshot, we decreased the speed to ERPM g
 
 For this part, we followed a guide from MushR. To test the steering angle to server gain, we had to also have a tape measure and see the best value by running the car over and over. We had a tape measure go out to around 2.5m, then had set the back wheels to the beginning of the tape measure in a direction that makes it a T shape. To calculate what we needed as our arc, we needed to do 
 
-<img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224545-8021f980-7e91-11eb-9015-ba684895075d.png">
+<img alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224545-8021f980-7e91-11eb-9015-ba684895075d.png">
 
-<img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224541-713b4700-7e91-11eb-9a21-e186cbed8528.png">
+<img alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224541-713b4700-7e91-11eb-9a21-e186cbed8528.png">
