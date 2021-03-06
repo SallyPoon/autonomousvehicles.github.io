@@ -63,3 +63,9 @@ After this, if we got a distance that overshot, we decreased the speed to ERPM g
 
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224239-b27e2780-7e8e-11eb-8acc-4b017871adc1.png"> <img width="423" alt="line3912" src="https://user-images.githubusercontent.com/13074631/110224240-b3af5480-7e8e-11eb-9246-6c95ecd0964a.png"> <img width="425" alt="line4112" src="https://user-images.githubusercontent.com/13074631/110224243-b4e08180-7e8e-11eb-92b5-91a96e4eeba1.png"> <img width="434" alt="line4612" src="https://user-images.githubusercontent.com/13074631/110224245-b6aa4500-7e8e-11eb-82ef-49d7956f5092.png"> <img width="424" alt="line5112" src="https://user-images.githubusercontent.com/13074631/110224248-b7db7200-7e8e-11eb-8dc4-2606a13e1617.png"> <img width="408" alt="line5612" src="https://user-images.githubusercontent.com/13074631/110224249-ba3dcc00-7e8e-11eb-965a-fa3e565ab30d.png">
 
+## MushR Steering Angle Calibration
+
+For this part, we followed a guide from MushR. To test the steering angle to server gain, we had to also have a tape measure and see the best value by running the car over and over. We had a tape measure go out to around 2.5m, then had set the back wheels to the beginning of the tape measure in a direction that makes it a T shape. To calculate what we needed as our arc, we needed to do 
+![image](https://user-images.githubusercontent.com/13074631/110224537-684a7580-7e91-11eb-812b-bc81d009d10e.png)
+
+![image](https://user-images.githubusercontent.com/13074631/110224541-713b4700-7e91-11eb-9a21-e186cbed8528.png)
