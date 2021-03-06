@@ -21,8 +21,11 @@ Using this equation, the robot car can predict where it's location respective to
 ### Where did we start?
 #### You need on your car:
 - Vedder Electronic Speed Controller
+
 <img width="497" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222859-4ef1fb00-7e8a-11eb-8d6d-b055f8208cd5.jpg">
+
 - Servo that has an encoder board
+
 <img width="497" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222914-d17aba80-7e8a-11eb-9875-a7099eee5c53.png">
 
 #### What's next?
