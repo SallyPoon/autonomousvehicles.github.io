@@ -82,7 +82,7 @@ For this part, we followed a guide from MushR. To test the steering angle to ser
   <figcaption>Endpoint for servo_to_erpm_gain Calibration</figcaption>
 </figure>
 
-
+\
 For our car the length is 0.475 and the maximum steering is 0.34. This ends up being around 2.44m. To do this test, we had to change the steering to erpm gain variable. The values had to be negative because if we set a positive steering to erpm gain, it would invert the turn. During our first tuning, we tried to do 0 however, we learned that if we set zero, it would not turn at all. During the test, our original value was 0.67 however we had to retune. This was because even though during our test it hit 2.44m, we realized that when graphing it with a constant speed, it would never hit that amount. Because of this, we decided to make our our tuning test.
 
 
