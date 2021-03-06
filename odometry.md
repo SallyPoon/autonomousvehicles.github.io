@@ -30,5 +30,6 @@ To increase the accuracy of our odometry readings, tuning has to be done on the 
 
 
 erpm (electrical rpm) = speed to erpm gain * speed (meters / second) + speed to erpm offset\
+
 servo value (0 to 1) = steering angle to servo gain * steering angle (radians) + steering angle to servo offset
 
