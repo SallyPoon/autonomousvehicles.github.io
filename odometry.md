@@ -29,6 +29,6 @@ Using this equation, the robot car can predict where it's location respective to
 To increase the accuracy of our odometry readings, tuning has to be done on the VESC.yaml file to account both the steering and angle gain used in our equations. The equations being used are:
 
 
-erpm (electrical rpm) = speed to erpm gain * speed (meters / second) + speed to erpm offset
+erpm (electrical rpm) = speed to erpm gain * speed (meters / second) + speed to erpm offset\
 servo value (0 to 1) = steering angle to servo gain * steering angle (radians) + steering angle to servo offset
 
