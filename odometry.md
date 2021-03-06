@@ -36,3 +36,7 @@ erpm (electrical rpm) = speed to erpm gain * speed (meters / second) + speed to 
 
 servo value (0 to 1) = steering angle to servo gain * steering angle (radians) + steering angle to servo offset
 
+
+#### ERPM Calibration
+For the ERPM, we tried to find the best value for speed to erpm gain, which was only obtainable by constantly tuning and testing the value. To do this tuning, we took a tape measure and extended it by around two feet, put our car's back wheels at zero meters and drive straight. After driving straight, we can grab the distance by doing rostopic echo /vesc/odom/pose/pose/position/x. After this, if we got a distance that overshot, we decreased the speed to ERPM gain and if it undershot, we would increase the speed to ERPM gain. After testing the values of 4412, 4912, 5412, 3912, 3412, and 4012, we found that 4112 was the most accurate value with around a 0.0007 error from the actual position versus a 0.480117 ,0.118568, -0.178206, -042677, and -0.619709 error.
+
