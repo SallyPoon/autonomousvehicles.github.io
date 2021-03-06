@@ -56,7 +56,7 @@ For the ERPM, we tried to find the best value for speed to erpm gain, which was 
   <figcaption>End Point for ERPM Calibration</figcaption>
 </figure>
 
-
+### ERPM Calibration Results
 After this, if we got a distance that overshot, we decreased the speed to ERPM gain and if it undershot, we would increase the speed to ERPM gain. After testing the values of 4412, 4912, 5412, 3912, 3412, and 4012, we found that 4112 was the most accurate value with around a 0.0007 error from the actual position versus a 0.480117 ,0.118568, -0.178206, -042677, and -0.619709 error.
 
 <img width="256" alt="linetable" src="https://user-images.githubusercontent.com/13074631/110224290-05f07580-7e8f-11eb-9f8e-bab3373bcc2f.png"> 
