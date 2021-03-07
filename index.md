@@ -16,13 +16,13 @@ Our aim is to calibrate, tune, and analyze Odometry and IMU data to provide most
 ## Goals
 - Understanding of IMU and Odometry Sensor to help with reliable navigation and place within robot ecosystem.
 - Guides for OLA Artemis IMU setup + calibration and Odometry tuning/analysis
-- Calibration procedure of IMU sensor to ensure reliable measurements 
-- Tuning procedure of Odometry to ensure accurate measurements
+- Calibration procedure and Analysis of IMU sensor to ensure reliable measurements 
+- Tuning procedure of and Analysis Odometry to ensure accurate measurements
 - Odometry derived Position Estimate
 - IMU derived Primary Heading Estimate using fusion of accelerometer, gyroscope, and magnetometer readings
 - IMU and Odometry data ready to be easily ingested by other subteams through ROS using package standard and custom topics
 - IMU and Odometry data ready for fusion with GPS subteam within Kalman Filter if necessary for future advancement of robot localization
-- Analyze data readings and Noise Reduction Strategies
+- Noise Reduction Strategies
 
 ## Want to read more?
 [Odometry] - Read more on how sensors can calculate position!
