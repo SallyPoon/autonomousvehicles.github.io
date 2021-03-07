@@ -4,11 +4,13 @@ title: IMU
 permalink: imu/
 ---
 
-## Welcome to GitHub Pages
+## Intertial Measurement Unit (IMU)
+What exactly is an IMU you may ask? An IMU is a sensor that has an inbuilt accelerometer, gyroscope, and magenetometer and allows us to derive better relative position and orientation measurements for our robot. With this sensor we are able to measure Linear Acceleration, Angular Velocity, and sense Magnetic Fields and distortions in the X,Y, and Z axes. IMUs are commonly used in most electronic devices and vehicles, such as robots, missiles, and even in your smartphone! We utilized our IMU to primarily derive a Compass Heading for our robot so it could know its orientation in a global context. 
 
-You can use the [editor on GitHub](https://github.com/SallyPoon/autonomousvehicles.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Sparkfun Openlog Artemis IMU 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The IMU sensor we used and integrated with was the Sparkfun Openlog Artemis IMU. Initially, we had begun a majority of our development on the Sparkfun Razor 9DoF IMU, which was quite seamless to interface with ROS and achieve good results. However, the Razor was retired midway in the quarter! So, we decided to move forward with the Artemis IMU, which was the upgraded released model. This IMU proved to be challenging to integrate into our robotic system which was developed in ROS (Robot Operating System). Yet, we were able to prevail after reaching out in the community and coming in contact with Fabrice Le Bars, who pointed us to his ROS package in development that would allow us to interface with this IMU! However, there were still quite a few issues down the line integrating onto our Jetson Single Board Computer, Flashing software, and building the right board definitions. Thankfully, we were able to overcome and learned to enjoy the process as this was our first real exposure with Hardware struggles as Data Science and Software focused students. We have developed a guide to help in this process and also contains information on calibration which we will delve into shortly.
+
 
 ### Markdown
 
