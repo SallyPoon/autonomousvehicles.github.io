@@ -20,12 +20,12 @@ We utilized our IMU to primarily derive a Compass Heading (Yaw) for our robot so
 
 The IMU sensor we used and integrated with was the Sparkfun Openlog Artemis IMU. Initially, we had begun a majority of our development on the Sparkfun Razor 9DoF IMU, which was quite seamless to interface with ROS and achieve good results. However, the Razor was retired midway in the quarter! So, we decided to move forward with the Artemis IMU, which was the upgraded released model. This IMU proved to be challenging to integrate into our robotic system which was developed in ROS (Robot Operating System). Yet, we were able to prevail after reaching out in the community and coming in contact with Fabrice Le Bars, who pointed us to his ROS package in development that would allow us to interface with this IMU! However, there were still quite a few issues down the line integrating onto our Jetson Single Board Computer, Flashing software, and building the right board definitions. Thankfully, we were able to overcome and learned to enjoy the process as this was our first real exposure with Hardware struggles as Data Science and Software focused students. We have developed a guide to help in this process and also contains information on calibration which we will delve into shortly.
 
-<p align="left">
-  <img align = "center" width="250" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232226-67d1cf00-7ed1-11eb-8146-504059e05f1c.png">
+<p align="center">
+  <img align = "center" width="650" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232226-67d1cf00-7ed1-11eb-8146-504059e05f1c.png">
 </p>
 
-<p align="right">
-  <img align = "center" width="250" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232147-f134d180-7ed0-11eb-8041-da3bb8130647.png">
+<p align="center">
+  <img align = "center" width="300" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232147-f134d180-7ed0-11eb-8041-da3bb8130647.png">
 </p>
 
 ## Calibration Analysis
@@ -35,11 +35,20 @@ To do this we calibrated the accelerometer for gravitation force in all 3 axes a
 We analyzed 3 major calibration settings (after finetuning variety of parameters) for the Heading (Yaw) while driving a straight line path headed West (90 deg). The settings were calibrating acceloremeter+gyroscope, accel+gyro+standard magnetometer technique, and accel+gyro+extended magnetometer technique.
 We found that the extended magnetometer calibration technique was a critical factor in providing accurate Heading estimates and reducing error, also giving us insight into how large of a factor magnetic distortions onboard our robot can intefere with our IMU data. 
 
---Insert Image of Test---
+<p align="center">
+  <img align = "center" width=900" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232439-81bfe180-7ed2-11eb-9278-6cda91a422bf.png">
+</p>
 
 We then repeated this test except conducted a Half Arc 180 degree turn from West to East. The findings solidified our previous results by proper magnetometer calibration producing the least error. 
 
+<p align="center">
+  <img align = "center" width=900" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232546-1b878e80-7ed3-11eb-84be-53ee10b34764.png">
+</p>
+
+Now that we established and analyzed a proper calibration procedure, here were the results!
+
 Here is a successful 180 degree turn with our Heading!
+
 
 And now a successful 360 degree turn with our Heading!
 
