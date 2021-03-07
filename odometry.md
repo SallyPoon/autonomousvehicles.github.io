@@ -156,4 +156,5 @@ Because of this, we had to retune the steering angle however since we made previ
 
 ### References
 Rockett, Matthew. “Tuning Guide.” MuSHR, CoRR, mushr.io/tutorials/tuning/.
+
 Troya, Alfonso. “ROBOT ODOMETRY: Details.” Details | Hackaday.io, hackaday.io/project/158496-imcoders/log/147068-robot-odometry. 
