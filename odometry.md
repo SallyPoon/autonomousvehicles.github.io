@@ -20,7 +20,7 @@ Using this equation, the robot car can predict where it's location respective to
   </p>
 
 
-## Why do we need to calibrate??
+## Why do we need to calibrate?
 When trying to predict the location of the robot car respective to the starting point, it uses equations that add onto the past position to find the new position. Without calibration, the predictions may over or underestimate where the car actually is!
 
 
