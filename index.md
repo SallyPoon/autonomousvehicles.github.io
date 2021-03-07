@@ -1,6 +1,7 @@
 # Welcome to Autonomous Vehicles - Odometry and IMU!
 
-![Alt Text](https://media.giphy.com/media/KcdCOCzmmfy0ZlzbXT/giphy.gif)
+
+![IMG_1856-min](https://user-images.githubusercontent.com/13074631/110229215-95f8e400-7ebc-11eb-813c-96c579c45588.png)
 
 ## Introduction
 When building systems for autonomous vehicle racing and driving, it is critical for the robot to localize itself within the environment it is navigating. Robot localization comprises of the robot being able to derive its current path and its heading for future motion estimation. Popular approaches often involve using GPS data solely and computer vision sensing. However, relying heavily on GPS coordinates or LiDar in open outdoor environments can lead to several issues. GPS is prone to lag and may be infeasible in harsher and unfamiliar terrain, resulting in loss of accuracy in tracking by failing to produce necessary positional information. Computer Vision approaches often depend heavily on training data and cannot always provide continouos and accurate orientation. Our problem investigates using IMU and Odometry sensors to aid in this mission by providing relevant data, position estimates, and vehicle heading in cases when GPS and other mapping are not reliable, or to supplement these approaches. IMU (Inertial  Measurement  Unit) provides linear acceleration, angular velocity, and magnetic force sensing ability through the use of accelorometers, gyroscopes, and occasionally magnetometers.  Wheel Odometry  also provide  useful  measurements  to  estimate the  position  of  the  car  through  the use of the wheel’s circumference and rotations per second. Together, these  sensors provide relevant and invaluable data that can be fused to obtain a primary heading and position estimate for the robot. Furthermore, these sensors can be fused with navigation and obstacle avoidance systems already in place to build more robust and accurate autonomous navigation models.
@@ -23,6 +24,8 @@ When building systems for autonomous vehicle racing and driving, it is critical 
 [IMU] - 
 
 
+
+![Alt Text](https://media.giphy.com/media/KcdCOCzmmfy0ZlzbXT/giphy.gif)
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
