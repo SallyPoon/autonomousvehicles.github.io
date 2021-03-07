@@ -10,13 +10,13 @@ permalink: odometry/
 Odometry is the use of motion sensors to estimate change over time. To do this, odometry requires the time, rotation per minute and steering angle. After this, we can calculate odometry by doing: 
 
 <p align="center">
-  <img align = "center" width="497" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222668-b5761980-7e88-11eb-8d68-1daa2cbe491b.png">
+  <img align = "center" width="300" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222668-b5761980-7e88-11eb-8d68-1daa2cbe491b.png">
 </p>
 
 
 Using this equation, the robot car can predict where it's location respective to it's last position. The goal of odometry is to get a estimate of where the robot has driven to respect to its starting point.
 <p align="center">
-<img align = "center" width="497" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222745-56fd6b00-7e89-11eb-85c8-12f0b9c599df.png">
+<img align = "center" width="300" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222745-56fd6b00-7e89-11eb-85c8-12f0b9c599df.png">
   </p>
 
 
@@ -29,11 +29,11 @@ When trying to predict the location of the robot car respective to the starting 
 #### You need on your car:
 - Vedder Electronic Speed Controller - Gives commands to the car to move
 
-<img width="497" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222859-4ef1fb00-7e8a-11eb-8d6d-b055f8208cd5.jpg">
+<img width="300" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222859-4ef1fb00-7e8a-11eb-8d6d-b055f8208cd5.jpg">
 
 - Servo that has an encoder board - The motor of the car
 
-<img width="497" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222914-d17aba80-7e8a-11eb-9875-a7099eee5c53.png">
+<img width="300" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222914-d17aba80-7e8a-11eb-9875-a7099eee5c53.png">
 
 ### What's next?
 To increase the accuracy of our odometry readings, tuning has to be done on the Veddar Electronic Speed Controller file to account both the steering and angle gain used in our equations. The equations being used are:
@@ -49,17 +49,17 @@ For the electronic rotations per minute, we tried to find the best value for spe
 
 <p align="center"> Start Point for ERPM Calibration </p>
   <p align="center">
-<img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224401-279e2c80-7e90-11eb-835d-0be1c28467dc.png">
+<img width="300" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224401-279e2c80-7e90-11eb-835d-0be1c28467dc.png">
       </p>
   
 <p align="center"> Midpoint Point for ERPM Calibration </p>
   <p align="center">
-<img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224450-8ebbe100-7e90-11eb-8694-f0b4eafd2b54.png">
+<img width="300" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224450-8ebbe100-7e90-11eb-8694-f0b4eafd2b54.png">
     </p>
 
 <p align="center"> End Point for ERPM Calibration </p>
   <p align="center">
-<img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224451-8fed0e00-7e90-11eb-94f0-f8575fbc1452.png">
+<img width="300" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224451-8fed0e00-7e90-11eb-94f0-f8575fbc1452.png">
     </p>
 
 ### Electronic Rotations Per Minute Calibration Results
@@ -69,7 +69,7 @@ After this, if we got a distance that overshot, we decreased the speed to electr
 <img width="256" alt="linetable" src="https://user-images.githubusercontent.com/13074631/110224290-05f07580-7e8f-11eb-9f8e-bab3373bcc2f.png"> 
   </p>
 
-<p float="left">
+<p align="cner">
   <img width="300" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224239-b27e2780-7e8e-11eb-8acc-4b017871adc1.png"> 
   <img width="300" alt="line3912" src="https://user-images.githubusercontent.com/13074631/110224240-b3af5480-7e8e-11eb-9246-6c95ecd0964a.png"> 
   <img width="300" alt="line4112" src="https://user-images.githubusercontent.com/13074631/110224243-b4e08180-7e8e-11eb-92b5-91a96e4eeba1.png"> 
@@ -112,7 +112,7 @@ For our car the length is 0.475 and the maximum steering is 0.34. This ends up b
 
 After finding that the MushR tuning test was not accurate for our needs, we decided to make our own test that uses our maximum distance value of 1.8m. For this test, we would turn the car each time and see how close it plots to 1.8m. To do this, we tried a steering to erpm gain of -0.5, which made over a full circle when we only did a half circle, showing that it was too much of a steering angle. 
 
-<p float="left">
+<p align='center'>
   <img width="300" alt="circle_0 5" src="https://user-images.githubusercontent.com/13074631/110224837-47cfea80-7e94-11eb-9e2b-707110270c76.png"> 
   <img width="300" alt="circle_0 7" src="https://user-images.githubusercontent.com/13074631/110224839-4999ae00-7e94-11eb-8bd6-3035b1ca7d31.png"> 
   <img width="300" alt="circle_0 8" src="https://user-images.githubusercontent.com/13074631/110224840-4c949e80-7e94-11eb-8026-493defa15708.png"> 
@@ -133,7 +133,7 @@ After reading the equation and testing values, we realized that the steering to 
 <img align= "center" width="319" alt="circletable" src="https://user-images.githubusercontent.com/13074631/110224908-ebb99600-7e94-11eb-9b05-f5175710a003.png">
   </p>
 
-<p float="left">
+<p align='center'>
   <img width="300" alt="circle1 0" src="https://user-images.githubusercontent.com/13074631/110224897-de9ca700-7e94-11eb-8d98-42e792217541.png">
   <img width="300" alt="circle1 1" src="https://user-images.githubusercontent.com/13074631/110224898-e0ff0100-7e94-11eb-8b7d-41371c4bfdd3.png">
   <img width="300" alt="circle1 2" src="https://user-images.githubusercontent.com/13074631/110224899-e2302e00-7e94-11eb-92e3-422e5283fcae.png">
