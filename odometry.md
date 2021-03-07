@@ -118,8 +118,6 @@ After reading the equation and testing values, we realized that the steering to 
 
 <img width="319" alt="circletable" src="https://user-images.githubusercontent.com/13074631/110224908-ebb99600-7e94-11eb-9b05-f5175710a003.png">
 
-</br>
-
 <p float="left">
   <img width="300" alt="circle1 0" src="https://user-images.githubusercontent.com/13074631/110224897-de9ca700-7e94-11eb-8d98-42e792217541.png">
   <img width="300" alt="circle1 1" src="https://user-images.githubusercontent.com/13074631/110224898-e0ff0100-7e94-11eb-8b7d-41371c4bfdd3.png">
