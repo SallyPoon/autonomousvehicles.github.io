@@ -1,4 +1,5 @@
-# Welcome to Autonomous Vehicles - Odometry and IMU!
+# Welcome to Autonomous Vehicles!
+#    Odometry and IMU Team
 
 
 ![IMG_1856-min](https://user-images.githubusercontent.com/13074631/110229215-95f8e400-7ebc-11eb-813c-96c579c45588.png)
