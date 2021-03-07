@@ -9,7 +9,9 @@ What exactly is an IMU you may ask? An IMU is a sensor that has an inbuilt accel
 
 IMUs are commonly used in most electronic devices and vehicles, such as robots, missiles, and even in your smartphone! 
 
-![image](https://user-images.githubusercontent.com/43420182/110232018-eded1600-7ecf-11eb-9d36-b3df82ed6c85.png)
+<p align="center">
+  <img align = "center" width="500" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232018-eded1600-7ecf-11eb-9d36-b3df82ed6c85.png">
+</p>
 
 We utilized our IMU to primarily derive a Compass Heading (Yaw) for our robot so it could establish its orientation in a global context. 
 
