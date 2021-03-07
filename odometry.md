@@ -1,5 +1,5 @@
 ---
-layout: odometry
+layout: default
 title: Odometry
 permalink: odometry/
 ---
