@@ -17,10 +17,11 @@ When building systems for autonomous vehicle racing and driving, it is critical 
 
 ## Want to read more?
 [Odometry] - Read more on how sensors can calculate position!
-
+[IMU] - 
 
 
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
    [Odometry]: <https://sallypoon.github.io/autonomousvehicles.github.io/odometry/>
+   [IMU]: <https://sallypoon.github.io/autonomousvehicles.github.io/imu/>
