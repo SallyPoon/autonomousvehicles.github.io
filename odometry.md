@@ -38,7 +38,7 @@ servo value (0 to 1) = steering angle to servo gain * steering angle (radians) +
 
 
 ### ERPM Calibration
-For the ERPM, we tried to find the best value for speed to erpm gain, which was only obtainable by constantly tuning and testing the value. To do this tuning, we took a tape measure and extended it by around two feet, put our car's back wheels at zero meters and drive straight. After driving straight, we can grab the distance by doing rostopic echo /vesc/odom/pose/pose/position/x. 
+For the ERPM, we tried to find the best value for speed to erpm gain, which was only obtainable by constantly tuning and testing the value. To do this tuning, we took a tape measure and extended it by around two feet, put our car's back wheels at zero meters and drive straight. After driving straight, we can grab the distance and cross reference it with its real distance.
 
 
 <figure>
@@ -89,11 +89,11 @@ For this part, we followed a guide from MushR. To test the steering angle to ser
 </figure>
 
 
-For our car the length is 0.475 and the maximum steering is 0.34. This ends up being around 2.44m. To do this test, we had to change the steering to erpm gain variable. The values had to be negative because if we set a positive steering to erpm gain, it would invert the turn. During our first tuning, we tried to do 0 however, we learned that if we set zero, it would not turn at all. During the test, our original value was 0.67 however we had to retune. This was because even though during our test it hit 2.44m, we realized that when graphing it with a constant speed, it would never hit that amount. Because of this, we decided to make our our tuning test.
+For our car the length is 0.475 and the maximum steering is 0.34. This ends up being around 2.44m. To do this test, we had to change the steering to erpm gain variable. The values had to be negative because if we set a positive steering to erpm gain, it would invert the turn. 
 
 ## Improved Steering Angle Calibration
 
-After finding that the MushR tuning test was not accurate for our needs, we decided to make our own test that uses our maximum distance value of 1.8m. For this test, we would turn the car each time and see how close it plots to 1.8m. To do this, we tried a steering to erpm gain of -0.5, which made over a full circle when we only did a half circle, showing that it was too much of a steering angle. After this, we through to increase the steering angle to -0.7 which preformed a little better but still made a full circle. We tried increasing it again to 0.8 servo to erpm gain to see how the change affects the circle because at the time, we did not know what caused it to run a full circle when we only ran a half circle. Our final try before researching more was 0.9 servo to erpm gain. Our final try before researching more was 0.9 servo to erpm gain.
+After finding that the MushR tuning test was not accurate for our needs, we decided to make our own test that uses our maximum distance value of 1.8m. For this test, we would turn the car each time and see how close it plots to 1.8m. To do this, we tried a steering to erpm gain of -0.5, which made over a full circle when we only did a half circle, showing that it was too much of a steering angle. 
 
 <p float="left">
   <img width="300" alt="circle_0 5" src="https://user-images.githubusercontent.com/13074631/110224837-47cfea80-7e94-11eb-9e2b-707110270c76.png"> 
@@ -110,9 +110,7 @@ After seeing that it was not giving the right predicted values, we decided to lo
 current angular velocity = current speed * tan(current steering angle) / wheelbase
 
 
-After reading the equation and testing values, we realized that the steering to servo gain directly changes the odometry prediction we would get. This means that if we increased the gain, it would start predicting a larger value and if we decreased the gain it would decrease the predicted value. Knowing this, we started changing our values again to try to perfect our odometry prediction.
-
-For our second batch of tests, we tried starting with a -1.0 steering to erpm gain. When we did this we saw that it was close to half a circle however we wanted to ensure that by changing this servo to erpm gain to over -1, we would be getting closer to our intended half circle. Next, we tried a more extreme value of -10 and saw it only did a small arc, proving that by decreasing the servo to erpm gain we were decreasing the predicted arc value. Since we have proven the extremes of the erpm to servo gain values, we started honing into the right servo to erpm gain value. We tried -1.5 next however it still made too small of an arc. After this, we went changed the value to an erpm to servo gain of -1.2 which was very close however just shy of the amount we wanted the arc to be. The final value we tested was -1.1, which after testing gave an arc with only a 0.05m error.
+After reading the equation and testing values, we realized that the steering to servo gain directly changes the odometry prediction we would get. This means that if we increased the gain, it would start predicting a larger value and if we decreased the gain it would decrease the predicted value. Knowing this, we started changing our values again to try to perfect our odometry prediction. The final value we tested was -1.1, which after testing gave an arc with only a 0.05m error.
 
 <img width="319" alt="circletable" src="https://user-images.githubusercontent.com/13074631/110224908-ebb99600-7e94-11eb-9b05-f5175710a003.png">
 
@@ -136,10 +134,4 @@ Because of this, we had to retune the steering angle however since we made previ
 
 
 ### References
-@article{srinivasa2019mushr,
- title={{MuSHR}: A Low-Cost, Open-Source Robotic Racecar for Education and Research},
- author={Srinivasa, Siddhartha S. and Lancaster, Patrick and Michalove, Johan and Schmittle, Matt and Summers, Colin and Rockett, Matthew and Smith, Joshua R. and Chouhury, Sanjiban and Mavrogiannis, Christoforos and Sadeghi, Fereshteh},
- journal={CoRR},
- volume={abs/1908.08031},
- year={2019}
-}
+Rockett, Matthew. “Tuning Guide.” MuSHR, CoRR, mushr.io/tutorials/tuning/.
