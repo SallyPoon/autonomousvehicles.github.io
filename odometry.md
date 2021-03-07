@@ -114,7 +114,7 @@ After seeing that it was not giving the right predicted values, we decided to lo
 current angular velocity = current speed * tan(current steering angle) / wheelbase
 
 
-After reading the equation and testing values, we realized that the steering to servo gain directly changes the odometry prediction we would get. This means that if we increased the gain, it would start predicting a larger value and if we decreased the gain it would decrease the predicted value. Knowing this, we started changing our values again to try to perfect our odometry prediction. The final value we tested was -1.1, which after testing gave an arc with only a 0.05m error.
+After reading the equation and testing values, we realized that the steering to servo gain directly changes the odometry prediction we would get. This means that if we increased the gain, it would start predicting a larger value and if we decreased the gain it would decrease the predicted value. Knowing this, we started changing our values again to try to perfect our odometry prediction. The final value we tested was -1.1, which gave an arc with only a 0.05m error.
 
 <img width="319" alt="circletable" src="https://user-images.githubusercontent.com/13074631/110224908-ebb99600-7e94-11eb-9b05-f5175710a003.png">
 
