@@ -61,8 +61,14 @@ After this, if we got a distance that overshot, we decreased the speed to ERPM g
 
 <img width="256" alt="linetable" src="https://user-images.githubusercontent.com/13074631/110224290-05f07580-7e8f-11eb-9f8e-bab3373bcc2f.png"> 
 
-<img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224239-b27e2780-7e8e-11eb-8acc-4b017871adc1.png"> <img width="423" alt="line3912" src="https://user-images.githubusercontent.com/13074631/110224240-b3af5480-7e8e-11eb-9246-6c95ecd0964a.png"> <img width="425" alt="line4112" src="https://user-images.githubusercontent.com/13074631/110224243-b4e08180-7e8e-11eb-92b5-91a96e4eeba1.png"> <img width="434" alt="line4612" src="https://user-images.githubusercontent.com/13074631/110224245-b6aa4500-7e8e-11eb-82ef-49d7956f5092.png"> <img width="424" alt="line5112" src="https://user-images.githubusercontent.com/13074631/110224248-b7db7200-7e8e-11eb-8dc4-2606a13e1617.png"> <img width="408" alt="line5612" src="https://user-images.githubusercontent.com/13074631/110224249-ba3dcc00-7e8e-11eb-965a-fa3e565ab30d.png">
-
+<p float="left">
+  <img width="300" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224239-b27e2780-7e8e-11eb-8acc-4b017871adc1.png"> 
+  <img width="300" alt="line3912" src="https://user-images.githubusercontent.com/13074631/110224240-b3af5480-7e8e-11eb-9246-6c95ecd0964a.png"> 
+  <img width="300" alt="line4112" src="https://user-images.githubusercontent.com/13074631/110224243-b4e08180-7e8e-11eb-92b5-91a96e4eeba1.png"> 
+  <img width="300" alt="line4612" src="https://user-images.githubusercontent.com/13074631/110224245-b6aa4500-7e8e-11eb-82ef-49d7956f5092.png"> 
+  <img width="300" alt="line5112" src="https://user-images.githubusercontent.com/13074631/110224248-b7db7200-7e8e-11eb-8dc4-2606a13e1617.png"> 
+  <img width="300" alt="line5612" src="https://user-images.githubusercontent.com/13074631/110224249-ba3dcc00-7e8e-11eb-965a-fa3e565ab30d.png">
+</p>
 ## MushR Steering Angle Calibration
 
 For this part, we followed a guide from MushR. To test the steering angle to server gain, we had to also have a tape measure and see the best value by running the car over and over. We had a tape measure go out to around 2.5m, then had set the back wheels to the beginning of the tape measure in a direction that makes it a T shape. To calculate what we needed as our arc, we needed to use
@@ -113,11 +119,11 @@ For our second batch of tests, we tried starting with a -1.0 steering to erpm ga
 </br>
 
 <p float="left">
-  <img width="427" alt="circle1 0" src="https://user-images.githubusercontent.com/13074631/110224897-de9ca700-7e94-11eb-8d98-42e792217541.png">
-  <img width="437" alt="circle1 1" src="https://user-images.githubusercontent.com/13074631/110224898-e0ff0100-7e94-11eb-8b7d-41371c4bfdd3.png">
-  <img width="425" alt="circle1 2" src="https://user-images.githubusercontent.com/13074631/110224899-e2302e00-7e94-11eb-92e3-422e5283fcae.png">
-  <img width="421" alt="circle1 5" src="https://user-images.githubusercontent.com/13074631/110224901-e52b1e80-7e94-11eb-9470-4c339a4df8f9.png">
-  <img width="435" alt="circle10" src="https://user-images.githubusercontent.com/13074631/110224905-ea886900-7e94-11eb-81d8-d741a2fc6a54.png"> 
+  <img width="300" alt="circle1 0" src="https://user-images.githubusercontent.com/13074631/110224897-de9ca700-7e94-11eb-8d98-42e792217541.png">
+  <img width="300" alt="circle1 1" src="https://user-images.githubusercontent.com/13074631/110224898-e0ff0100-7e94-11eb-8b7d-41371c4bfdd3.png">
+  <img width="300" alt="circle1 2" src="https://user-images.githubusercontent.com/13074631/110224899-e2302e00-7e94-11eb-92e3-422e5283fcae.png">
+  <img width="300" alt="circle1 5" src="https://user-images.githubusercontent.com/13074631/110224901-e52b1e80-7e94-11eb-9470-4c339a4df8f9.png">
+  <img width="300" alt="circle10" src="https://user-images.githubusercontent.com/13074631/110224905-ea886900-7e94-11eb-81d8-d741a2fc6a54.png"> 
 </p>
 
 ## Odometry Afterthoughts and Discussion!
