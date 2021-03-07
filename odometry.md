@@ -104,8 +104,9 @@ current angular velocity = current speed * tan(current steering angle) / wheelba
 After reading the equation and testing values, we realized that the steering to servo gain directly changes the odometry prediction we would get. This means that if we increased the gain, it would start predicting a larger value and if we decreased the gain it would decrease the predicted value. Knowing this, we started changing our values again to try to perfect our odometry prediction.
 
 For our second batch of tests, we tried starting with a -1.0 steering to erpm gain. When we did this we saw that it was close to half a circle however we wanted to ensure that by changing this servo to erpm gain to over -1, we would be getting closer to our intended half circle. Next, we tried a more extreme value of -10 and saw it only did a small arc, proving that by decreasing the servo to erpm gain we were decreasing the predicted arc value. Since we have proven the extremes of the erpm to servo gain values, we started honing into the right servo to erpm gain value. We tried -1.5 next however it still made too small of an arc. After this, we went changed the value to an erpm to servo gain of -1.2 which was very close however just shy of the amount we wanted the arc to be. The final value we tested was -1.1, which after testing gave an arc with only a 0.05m error.
-<figure>
+
 <img width="319" alt="circletable" src="https://user-images.githubusercontent.com/13074631/110224908-ebb99600-7e94-11eb-9b05-f5175710a003.png">
+
 </br>
 
 <p float="left">
