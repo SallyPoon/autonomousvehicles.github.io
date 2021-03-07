@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Odometry
+assets: style
 permalink: odometry/
 ---
 
