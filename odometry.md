@@ -11,7 +11,7 @@ permalink: odometry/
 Odometry is the use of motion sensors to estimate change over time. To do this, odometry requires the time, rotation per minute and steering angle. After this, we can calculate odometry by doing: 
 
 <p align="center">
-  <img align = "center" width="300" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222668-b5761980-7e88-11eb-8d68-1daa2cbe491b.png">
+  <img align = "center" width="500" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222668-b5761980-7e88-11eb-8d68-1daa2cbe491b.png">
 </p>
 
 
