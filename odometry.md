@@ -1,9 +1,3 @@
----
-layout: default
-title: Odometry
-permalink: odometry/
----
-
 # Welcome to odometry!
 
 ## What is odometry?
