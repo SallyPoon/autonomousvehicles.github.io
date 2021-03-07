@@ -18,7 +18,7 @@ Using this equation, the robot car can predict where it's location respective to
 <p align="center">
 <img align = "center" width="300" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222745-56fd6b00-7e89-11eb-85c8-12f0b9c599df.png">
   </p>
-
+<p align="center">
 <img align = "center" width="300" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110230818-7ebff380-7ec8-11eb-89fa-9b47b4ca2c41.png">
   </p>
 ## Why do we need to calibrate?
