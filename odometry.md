@@ -9,12 +9,13 @@ permalink: odometry/
 ## What is odometry?
 Odometry is the use of motion sensors to estimate change over time. To do this, odometry requires the time, rotation per minute and steering angle. After this, we can calculate odometry by doing: 
 
-<span style="display:block;text-align:center">![Screenshot_1](https://user-images.githubusercontent.com/13074631/110222668-b5761980-7e88-11eb-8d68-1daa2cbe491b.png)</span>
+<p align="center">![Screenshot_1](https://user-images.githubusercontent.com/13074631/110222668-b5761980-7e88-11eb-8d68-1daa2cbe491b.png)</p>
 
 
 Using this equation, the robot car can predict where it's location respective to it's last position. The goal of odometry is to get a estimate of where the robot has driven to respect to its starting point.
-
+<p align="center">
 <img align = "center" width="497" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222745-56fd6b00-7e89-11eb-85c8-12f0b9c599df.png">
+  </p>
   
 ## Calibration!!
 ### Where did we start?
@@ -39,26 +40,32 @@ servo value (0 to 1) = steering angle to servo gain * steering angle (radians) +
 ### ERPM Calibration
 For the ERPM, we tried to find the best value for speed to erpm gain, which was only obtainable by constantly tuning and testing the value. To do this tuning, we took a tape measure and extended it by around two feet, put our car's back wheels at zero meters and drive straight. After driving straight, we can grab the distance and cross reference it with its real distance.
 
-
+<p align="center">
 <figure>
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224401-279e2c80-7e90-11eb-835d-0be1c28467dc.png">
   <figcaption>Start Point for ERPM Calibration</figcaption>
 </figure>
-
+  </p>
+<p align="center">
 <figure>
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224450-8ebbe100-7e90-11eb-8694-f0b4eafd2b54.png">
   <figcaption>Midpoint Point for ERPM Calibration</figcaption>
 </figure>
+  </p>
 
+<p align="center">
 <figure>
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224451-8fed0e00-7e90-11eb-94f0-f8575fbc1452.png">
   <figcaption>End Point for ERPM Calibration</figcaption>
 </figure>
+  </p>
 
 ### ERPM Calibration Results
 After this, if we got a distance that overshot, we decreased the speed to ERPM gain and if it undershot, we would increase the speed to ERPM gain. After testing the values of 4412, 4912, 5412, 3912, 3412, and 4012, we found that 4112 was the most accurate value with around a 0.0007 error from the actual position versus a 0.480117 ,0.118568, -0.178206, -042677, and -0.619709 error.
 
+<p align="center">
 <img width="256" alt="linetable" src="https://user-images.githubusercontent.com/13074631/110224290-05f07580-7e8f-11eb-9f8e-bab3373bcc2f.png"> 
+  </p>
 
 <p float="left">
   <img width="300" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224239-b27e2780-7e8e-11eb-8acc-4b017871adc1.png"> 
@@ -72,9 +79,13 @@ After this, if we got a distance that overshot, we decreased the speed to ERPM g
 
 For this part, we followed a guide from MushR. To test the steering angle to server gain, we had to also have a tape measure and see the best value by running the car over and over. We had a tape measure go out to around 2.5m, then had set the back wheels to the beginning of the tape measure in a direction that makes it a T shape. To calculate what we needed as our arc, we needed to use
 
+<p align="center">
 ![image](https://user-images.githubusercontent.com/13074631/110227502-dc931200-7ead-11eb-98c9-e528c0bd69d9.png)
+</p>
 
+<p align="center">
 ![image](https://user-images.githubusercontent.com/13074631/110227506-e7e63d80-7ead-11eb-949e-9b18e07bb533.png)
+  </p>
 
 For our car the length is 0.475 and the maximum steering is 0.34. This ends up being around 2.44m. To do this test, we had to change the steering to erpm gain variable. The values had to be negative because if we set a positive steering to erpm gain, it would invert the turn. 
 
@@ -115,7 +126,9 @@ current angular velocity = current speed * tan(current steering angle) / wheelba
 
 After reading the equation and testing values, we realized that the steering to servo gain directly changes the odometry prediction we would get. This means that if we increased the gain, it would start predicting a larger value and if we decreased the gain it would decrease the predicted value. Knowing this, we started changing our values again to try to perfect our odometry prediction. The final value we tested was -1.1, which gave an arc with only a 0.05m error.
 
+<p align="center">
 <img align= "center" width="319" alt="circletable" src="https://user-images.githubusercontent.com/13074631/110224908-ebb99600-7e94-11eb-9b05-f5175710a003.png">
+  </p>
 
 <p float="left">
   <img width="300" alt="circle1 0" src="https://user-images.githubusercontent.com/13074631/110224897-de9ca700-7e94-11eb-8d98-42e792217541.png">
