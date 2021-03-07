@@ -9,14 +9,21 @@ permalink: odometry/
 ## What is odometry?
 Odometry is the use of motion sensors to estimate change over time. To do this, odometry requires the time, rotation per minute and steering angle. After this, we can calculate odometry by doing: 
 
-<p align="center">![Screenshot_1](https://user-images.githubusercontent.com/13074631/110222668-b5761980-7e88-11eb-8d68-1daa2cbe491b.png)</p>
+<p align="center">
+  <img align = "center" width="497" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222668-b5761980-7e88-11eb-8d68-1daa2cbe491b.png">
+</p>
 
 
 Using this equation, the robot car can predict where it's location respective to it's last position. The goal of odometry is to get a estimate of where the robot has driven to respect to its starting point.
 <p align="center">
 <img align = "center" width="497" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222745-56fd6b00-7e89-11eb-85c8-12f0b9c599df.png">
   </p>
-  
+
+
+## Why do we need to calibrate??
+When trying to predict the location of the robot car respective to the starting point, it uses equations that add onto the past position to find the new position. Without calibration, the predictions may over or underestimate where the car actually is!
+
+
 ## Calibration!!
 ### Where did we start?
 #### You need on your car:
