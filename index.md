@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Welcome our captsone project! \n (Odometry and IMU Team)
+title: Welcome our captsone project!\(Odometry and IMU Team)
 ---
 
 # Welcome to Autonomous Vehicles!
