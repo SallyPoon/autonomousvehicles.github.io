@@ -74,7 +74,7 @@ For this part, we followed a guide from MushR. To test the steering angle to ser
 
 <figure>
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224778-700b1980-7e93-11eb-86e2-1385f220f519.png">
-  <figcaption>Midturn for servo_to_erpm_gain Calibration/figcaption>
+  <figcaption>Midturn for servo_to_erpm_gain Calibration</figcaption>
 </figure>
 
 <figure>
