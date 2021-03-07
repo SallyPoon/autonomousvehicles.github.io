@@ -47,17 +47,17 @@ servo value (0 to 1) = steering angle to servo gain * steering angle (radians) +
 ### Electronic Rotations Per Minute Calibration
 For the electronic rotations per minute, we tried to find the best value for speed to erpm gain, which was only obtainable by constantly tuning and testing the value. To do this tuning, we took a tape measure and extended it by around two feet, put our car's back wheels at zero meters and drive straight. After driving straight, we can grab the distance and cross reference it with its real distance.
 
-Start Point for ERPM Calibration
+<p align="center"> Start Point for ERPM Calibration </p>
   <p align="center">
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224401-279e2c80-7e90-11eb-835d-0be1c28467dc.png">
       </p>
   
-Midpoint Point for ERPM Calibration
+<p align="center"> Midpoint Point for ERPM Calibration </p>
   <p align="center">
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224450-8ebbe100-7e90-11eb-8694-f0b4eafd2b54.png">
     </p>
 
-End Point for ERPM Calibration
+<p align="center"> End Point for ERPM Calibration </p>
   <p align="center">
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224451-8fed0e00-7e90-11eb-94f0-f8575fbc1452.png">
     </p>
@@ -92,17 +92,17 @@ For this part, we followed a guide from MushR. To test the steering angle to ser
 For our car the length is 0.475 and the maximum steering is 0.34. This ends up being around 2.44m. To do this test, we had to change the steering to erpm gain variable. The values had to be negative because if we set a positive steering to erpm gain, it would invert the turn. 
 
 
-Starting position for servo_to_erpm_gain Calibration
+<p align="center">Starting position for servo_to_erpm_gain Calibration</p>
   <p align="center">
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224450-8ebbe100-7e90-11eb-8694-f0b4eafd2b54.png">
   </p>
 
-Midturn for servo_to_erpm_gain Calibration
+<p align="center">Midturn for servo_to_erpm_gain Calibration</p>
   <p align="center">
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224778-700b1980-7e93-11eb-86e2-1385f220f519.png">
   </p>
 
-Endpoint for servo_to_erpm_gain Calibration
+<p align="center">Endpoint for servo_to_erpm_gain Calibration</p>
   <p align="center">
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224780-713c4680-7e93-11eb-80b3-795396c0aad5.png">
   </p>
