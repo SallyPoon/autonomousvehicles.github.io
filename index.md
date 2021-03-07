@@ -1,3 +1,8 @@
+---
+layout: default
+title: Welcome our Captsone Project! <br/> Odometry and IMU Team
+---
+
 # Welcome to Autonomous Vehicles!
 #    Odometry and IMU Team
 
@@ -24,16 +29,6 @@ Our aim is to calibrate, tune, and analyze Odometry and IMU data to provide most
 - IMU and Odometry data ready for fusion with GPS subteam within Kalman Filter if necessary for future advancement of robot localization
 - Noise Reduction Strategies
 
-## Want to read more?
-[Odometry] - Read more on how sensors can calculate position!
-
-[IMU] - 
-
 
 
 ![Alt Text](https://media.giphy.com/media/KcdCOCzmmfy0ZlzbXT/giphy.gif)
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-   [Odometry]: <https://sallypoon.github.io/autonomousvehicles.github.io/odometry/>
-   [IMU]: <https://sallypoon.github.io/autonomousvehicles.github.io/imu/>
