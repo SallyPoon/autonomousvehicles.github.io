@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: imu
 title: IMU
 permalink: imu/
 ---
