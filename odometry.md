@@ -1,6 +1,6 @@
 ---
 layout: odometry
-title: odometry
+title: Odometry
 permalink: odometry/
 ---
 
