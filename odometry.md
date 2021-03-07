@@ -1,3 +1,9 @@
+---
+layout: odometry
+title: odometry
+permalink: odometry/
+---
+
 # Welcome to odometry!
 
 ## What is odometry?
