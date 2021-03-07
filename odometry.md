@@ -20,16 +20,16 @@ Using this equation, the robot car can predict where it's location respective to
 ## Calibration!!
 ### Where did we start?
 #### You need on your car:
-- Vedder Electronic Speed Controller
+- Vedder Electronic Speed Controller - Gives commands to the car to move
 
 <img width="497" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222859-4ef1fb00-7e8a-11eb-8d6d-b055f8208cd5.jpg">
 
-- Servo that has an encoder board
+- Servo that has an encoder board - The motor of the car
 
 <img width="497" alt="Odomdf" src="https://user-images.githubusercontent.com/13074631/110222914-d17aba80-7e8a-11eb-9875-a7099eee5c53.png">
 
 ### What's next?
-To increase the accuracy of our odometry readings, tuning has to be done on the VESC.yaml file to account both the steering and angle gain used in our equations. The equations being used are:
+To increase the accuracy of our odometry readings, tuning has to be done on the Veddar Electronic Speed Controller file to account both the steering and angle gain used in our equations. The equations being used are:
 
 
 erpm (electrical rpm) = speed to erpm gain * speed (meters / second) + speed to erpm offset
@@ -37,31 +37,32 @@ erpm (electrical rpm) = speed to erpm gain * speed (meters / second) + speed to 
 servo value (0 to 1) = steering angle to servo gain * steering angle (radians) + steering angle to servo offset
 
 
-### ERPM Calibration
-For the ERPM, we tried to find the best value for speed to erpm gain, which was only obtainable by constantly tuning and testing the value. To do this tuning, we took a tape measure and extended it by around two feet, put our car's back wheels at zero meters and drive straight. After driving straight, we can grab the distance and cross reference it with its real distance.
+### Electronic Rotations Per Minute Calibration
+For the electronic rotations per minute, we tried to find the best value for speed to erpm gain, which was only obtainable by constantly tuning and testing the value. To do this tuning, we took a tape measure and extended it by around two feet, put our car's back wheels at zero meters and drive straight. After driving straight, we can grab the distance and cross reference it with its real distance.
 
-<p align="center">
 <figure>
+  <p align="center">
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224401-279e2c80-7e90-11eb-835d-0be1c28467dc.png">
   <figcaption>Start Point for ERPM Calibration</figcaption>
+      </p>
 </figure>
-  </p>
-<p align="center">
+  
 <figure>
+  <p align="center">
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224450-8ebbe100-7e90-11eb-8694-f0b4eafd2b54.png">
   <figcaption>Midpoint Point for ERPM Calibration</figcaption>
+    </p>
 </figure>
-  </p>
 
-<p align="center">
 <figure>
+  <p align="center">
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224451-8fed0e00-7e90-11eb-94f0-f8575fbc1452.png">
   <figcaption>End Point for ERPM Calibration</figcaption>
+    </p>
 </figure>
-  </p>
 
-### ERPM Calibration Results
-After this, if we got a distance that overshot, we decreased the speed to ERPM gain and if it undershot, we would increase the speed to ERPM gain. After testing the values of 4412, 4912, 5412, 3912, 3412, and 4012, we found that 4112 was the most accurate value with around a 0.0007 error from the actual position versus a 0.480117 ,0.118568, -0.178206, -042677, and -0.619709 error.
+### Electronic Rotations Per Minute Calibration Results
+After this, if we got a distance that overshot, we decreased the speed to electronic rotations per minute gain and if it undershot, we would increase the speed to ERPM gain. After testing the values of 4412, 4912, 5412, 3912, 3412, and 4012, we found that 4112 was the most accurate value with around a 0.0007 error from the actual position versus a 0.480117 ,0.118568, -0.178206, -042677, and -0.619709 error.
 
 <p align="center">
 <img width="256" alt="linetable" src="https://user-images.githubusercontent.com/13074631/110224290-05f07580-7e8f-11eb-9f8e-bab3373bcc2f.png"> 
@@ -89,19 +90,26 @@ For this part, we followed a guide from MushR. To test the steering angle to ser
 
 For our car the length is 0.475 and the maximum steering is 0.34. This ends up being around 2.44m. To do this test, we had to change the steering to erpm gain variable. The values had to be negative because if we set a positive steering to erpm gain, it would invert the turn. 
 
+
 <figure>
+  <p align="center">
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224450-8ebbe100-7e90-11eb-8694-f0b4eafd2b54.png">
   <figcaption>Starting position for servo_to_erpm_gain Calibration</figcaption>
+  </p>
 </figure>
 
 <figure>
+  <p align="center">
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224778-700b1980-7e93-11eb-86e2-1385f220f519.png">
   <figcaption>Midturn for servo_to_erpm_gain Calibration</figcaption>
+  </p>
 </figure>
 
 <figure>
+  <p align="center">
 <img width="406" alt="line3412" src="https://user-images.githubusercontent.com/13074631/110224780-713c4680-7e93-11eb-80b3-795396c0aad5.png">
   <figcaption>Endpoint for servo_to_erpm_gain Calibration</figcaption>
+  </p>
 </figure>
 
 
