@@ -91,10 +91,11 @@ After finding that the MushR tuning test was not accurate for our needs, we deci
 
 </br>
 <p float="left">
-<img width="443" alt="circle_0 5" src="https://user-images.githubusercontent.com/13074631/110224837-47cfea80-7e94-11eb-9e2b-707110270c76.png"> 
-  <img width="471" alt="circle_0 7" src="https://user-images.githubusercontent.com/13074631/110224839-4999ae00-7e94-11eb-8bd6-3035b1ca7d31.png"> <img width="462" alt="circle_0 8" src="https://user-images.githubusercontent.com/13074631/110224840-4c949e80-7e94-11eb-8026-493defa15708.png"> 
+  <img width="443" alt="circle_0 5" src="https://user-images.githubusercontent.com/13074631/110224837-47cfea80-7e94-11eb-9e2b-707110270c76.png"> 
+  <img width="471" alt="circle_0 7" src="https://user-images.githubusercontent.com/13074631/110224839-4999ae00-7e94-11eb-8bd6-3035b1ca7d31.png"> 
+  <img width="462" alt="circle_0 8" src="https://user-images.githubusercontent.com/13074631/110224840-4c949e80-7e94-11eb-8026-493defa15708.png"> 
   <img width="447" alt="circle_0 9" src="https://user-images.githubusercontent.com/13074631/110224841-4dc5cb80-7e94-11eb-9f23-a35f14017ffd.png">
-  </p>
+</p>
 
 
 After seeing that it was not giving the right predicted values, we decided to look into the file that predicts the odometry values. By going into the vesc to odom topic, we were able to find that the equation to calculate the odometry value is:
