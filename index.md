@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Welcome our Captsone Project! <br/> Odometry and IMU Team
+assets: style
 ---
 
 # Welcome to Autonomous Vehicles!
@@ -28,6 +29,7 @@ Our aim is to calibrate, tune, and analyze Odometry and IMU data to provide most
 - IMU and Odometry data ready to be easily ingested by other subteams through ROS using package standard and custom topics
 - IMU and Odometry data ready for fusion with GPS subteam within Kalman Filter if necessary for future advancement of robot localization
 - Noise Reduction Strategies
+- Integrating Oak camera to our robot
 
 
 
