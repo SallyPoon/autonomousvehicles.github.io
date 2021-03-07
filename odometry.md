@@ -133,3 +133,13 @@ The biggest issue we started with is that there was a problem with the directori
 Our first issue we started encountered was doing the steering angle tuning test and completing a 2.44m turn with a -0.67 servo to erpm gain gain. We considered this to be our final value and to validate, we started recording the predicted x and y values and graphing them to see if our tuning test was accurate. However, when we graphed the robot's pathing using the ERPM gain, we found that the odometry values overpredicted by double, showing a full circle pathing when we only drove half a circle. Because of this, we tried doing other values similar to out however we saw the same result mostly, showing that it drove half a circle. To try to understand this issue better, we went directly into the VESC node and looked at the equation used to calculate the odometry values and we found that based on the servo to erpm gain, if you decrease it even more, it will predict a smaller value, giving us a smaller arc.
 
 Because of this, we had to retune the steering angle however since we made previous human errors, we used a constant speed of 1m/s rather than an unbounded speed. The problem however was that since our speed was bounded at 1m/s, we would never hit 2.44ms turning so we decided to tweak the test and make our own. For this new test, we wanted to make it so the distance we are trying to predict is 1.8m instead of using the kinematic model equation and tune based on that value. After this, we had to retest multiple new values such as -1.0 and -10 to prove our theory of the arc and half circle increasing and decreasing based on the servo to erpm gain. After proving our theory through testing, we decided to start honing in on the most accurate servo to erpm gain. Next we tried -1.5 which under predicted and then -1.2 which was only -0.1 off. Our final value was -1.1 with a -0.05 error.
+
+
+### References
+@article{srinivasa2019mushr,
+ title={{MuSHR}: A Low-Cost, Open-Source Robotic Racecar for Education and Research},
+ author={Srinivasa, Siddhartha S. and Lancaster, Patrick and Michalove, Johan and Schmittle, Matt and Summers, Colin and Rockett, Matthew and Smith, Joshua R. and Chouhury, Sanjiban and Mavrogiannis, Christoforos and Sadeghi, Fereshteh},
+ journal={CoRR},
+ volume={abs/1908.08031},
+ year={2019}
+}
