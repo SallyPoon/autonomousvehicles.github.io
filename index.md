@@ -1,3 +1,8 @@
+---
+layout: default
+title: default 
+---
+
 # Welcome to Autonomous Vehicles!
 #    Odometry and IMU Team
 
