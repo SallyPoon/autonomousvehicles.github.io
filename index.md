@@ -1,6 +1,6 @@
 # Welcome to Autonomous Vehicles - Odometry and IMU!
 
-![Alt Text](https://giphy.com/gifs/KcdCOCzmmfy0ZlzbXT)
+![Alt Text](https://media.giphy.com/media/KcdCOCzmmfy0ZlzbXT/giphy.gif)
 
 ![IMG_1856-min](https://user-images.githubusercontent.com/13074631/110222059-86f63f80-7e84-11eb-8803-844f385161a3.png)
 ## Introduction
