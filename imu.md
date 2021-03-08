@@ -75,7 +75,6 @@ Our second mount was more secure and utilized one of the mounting holes on the b
 
 Overall the mounting strategies shined light on the extreme sensitivity of the IMU in its readings and the effects of the mount on these readings. Our next steps will be to test and integrate with our newly designed mount on our large 1/5 scale robot. 
 
-# In Development
 ## Kalman Filter 
 
 We utilized a Kalman Filter to fuse our IMU and Odometry readings to produce an enhanced position estimate and orientation for our robot. A Kalman filter is a 
