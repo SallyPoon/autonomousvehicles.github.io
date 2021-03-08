@@ -71,7 +71,21 @@ And now a successful 360 degree turn with our Heading starting at West (90 degre
 
 We also tested different mounting strategies to see how it would affect our IMU readings. Our simple mount strategy was fairly naive with a ziptie and double sided electrical fastening the IMU into place. This mount gave us insight into the large error and bias that was produced due to the uneven pressure on the IMU and unsecure mount. This can be seen in the Linear Acceleration Y values and in the large fluctuations in the Yaw Heading values. 
 
+<p align="center">
+  <img align = "center" width="300" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110269772-44625f00-7f79-11eb-9d59-98db66bdfddc.png">
+</p>
+
+![Screen Shot 2021-03-06 at 11 15 06 PM](https://user-images.githubusercontent.com/43420182/110269769-42000500-7f79-11eb-8d3f-fff0e136f3de.png)
+
 Our second mount was more secure and utilized one of the mounting holes on the board. The error in the Linear Acceleration and Yaw was minimized, however the there was still occasional sway which negatively affected the accuracy of the readings. 
+
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/43420182/110270084-e97d3780-7f79-11eb-8d8a-5ed5fdb4774e.png" width="400" />
+  <img src="https://user-images.githubusercontent.com/43420182/110270089-eb46fb00-7f79-11eb-8230-f51bd4755d96.png" width="400" /> 
+</p>
+
+
+![Screen Shot 2021-03-06 at 11 15 26 PM](https://user-images.githubusercontent.com/43420182/110270079-e6824700-7f79-11eb-9413-f038ffeda384.png)
 
 Overall the mounting strategies shined light on the extreme sensitivity of the IMU in its readings and the effects of the mount on these readings. Our next steps will be to test and integrate with our newly designed mount on our large 1/5 scale robot. 
 
