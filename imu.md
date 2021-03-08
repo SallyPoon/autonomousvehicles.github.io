@@ -16,6 +16,15 @@ IMUs are commonly used in most electronic devices and vehicles, such as jets, mi
 </p>
 
 We utilized our IMU to primarily derive a Heading (Yaw) for our robot so it could establish its orientation in a global context. 
+To derive the Roll, Pitch, and Yaw the following equations were utilized and implemented within ROS (robot operating system) on which robot's system was built: 
+
+Roll = 180 * atan2(accelY, sqrt(accelX*accelX + accelZ*accelZ))/PI$
+
+mag_x = magReadX*cos(pitch) + magReadY*sin(roll)*sin(pitch) + magReadZ*cos(roll)*sin(pitch)
+
+mag_y = magReadY * cos(roll) - magReadZ * sin(roll)
+
+Yaw = 180 * atan2(-mag_y,mag_x)/M_PI
 
 ## Sparkfun Openlog Artemis IMU & ROS Integration
 
@@ -33,11 +42,10 @@ The IMU sensor we used and integrated with was the Sparkfun Openlog Artemis IMU.
 It was crucial to calibrate our IMU to obtain the most accurate readings so that they could be relied upon by our robot's navigational stack. 
 To do this we calibrated the accelerometer for gravitation force in all 3 axes at rest, the gyroscope noise levels at rest, and the magnetic disortions present in the environment at rest. The magnetometer provided the most difficulty in calibration. This is because there are often strong magnetic distortions caused by the metal hardware, magnetized components, motors, etc.. 
 
-We analyzed 3 major calibration settings (after finetuning variety of parameters) for the Heading (Yaw) while driving a straight line path headed West (90 deg). The settings were calibrating acceloremeter+gyroscope, accel+gyro+standard magnetometer technique, and accel+gyro+extended magnetometer technique.
-We found that the extended magnetometer calibration technique was a critical factor in providing accurate Heading estimates and reducing error, also giving us insight into how large of a factor magnetic distortions onboard our robot can intefere with our IMU data. 
+We analyzed 3 best calibration settings (found through extendend testing of parameters in each condition) for the Heading (Yaw) while driving a straight line path headed West (90 deg). The settings were calibrating acceloremeter+gyroscope, accel+gyro+standard magnetometer technique, and accel+gyro+extended magnetometer technique. We found that the extended magnetometer calibration technique was a critical factor in providing accurate Heading estimates and reducing error, also giving us insight into how large of a factor magnetic distortions onboard our robot can intefere with our IMU data. 
 
 <p align="center">
-  <img align = "center" width=400" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232439-81bfe180-7ed2-11eb-9278-6cda91a422bf.png">
+  <img align = "center" width=900" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232439-81bfe180-7ed2-11eb-9278-6cda91a422bf.png">
 </p>
 
 We then repeated this test except conducted a Half Arc 180 degree turn from West to East. The findings solidified our previous results by proper magnetometer calibration producing the least error. 
@@ -48,10 +56,13 @@ We then repeated this test except conducted a Half Arc 180 degree turn from West
 
 Now that we established and analyzed a proper calibration procedure, here were the results!
 
-Here is a successful 180 degree turn with our Heading!
+Here is a successful 180 degree turn with our Heading from West to East (90 degrees to -90 degrees)!
+
+![west_to_east_180](https://user-images.githubusercontent.com/43420182/110262143-91d5d080-7f67-11eb-88c9-a58c4daae19a.gif)
+
+And now a successful 360 degree turn with our Heading starting at West (90 degrees) and returning there!
 
 
-And now a successful 360 degree turn with our Heading!
 
 ## Mounting
 
@@ -67,5 +78,7 @@ Overall the mounting strategies shined light on the extreme sensitivity of the I
 We researched several Noise Reduction approaches to attempt in migating the noise and bias that was affecting some of our IMU data readings, especially in Linear Acceleration. By applying Signal Processing techniques such as Low Pass Filter (which removes high frequency noise of a signal), Median Filter 
 
 ## Kalman Filter 
+
+We utilized a Kalman Filter to fuse our IMU and Odometry readings to produce an enhanced position estimate and 
 
 ## OAK camera
