@@ -56,12 +56,15 @@ We then repeated this test except conducted a Half Arc 180 degree turn from West
 
 Now that we established and analyzed a proper calibration procedure, here were the results!
 
+# 180 Degree Heading Turn 
 Here is a successful 180 degree turn with our Heading from West to East (90 degrees to -90 degrees)!
 
 ![west_to_east_180](https://user-images.githubusercontent.com/43420182/110262143-91d5d080-7f67-11eb-88c9-a58c4daae19a.gif)
 
+# 360 Degree Heading Turn 
 And now a successful 360 degree turn with our Heading starting at West (90 degrees) and returning there!
 
+![0_to_360](https://user-images.githubusercontent.com/43420182/110262222-dcefe380-7f67-11eb-9995-213f507cefe9.gif)
 
 
 ## Mounting
@@ -72,13 +75,21 @@ Our second mount was more secure and utilized one of the mounting holes on the b
 
 Overall the mounting strategies shined light on the extreme sensitivity of the IMU in its readings and the effects of the mount on these readings. Our next steps will be to test and integrate with our newly designed mount on our large 1/5 scale robot. 
 
+# In Development
+## Kalman Filter 
+
+We utilized a Kalman Filter to fuse our IMU and Odometry readings to produce an enhanced position estimate and orientation for our robot. A Kalman filter is a 
+used to obtain the best estimate of states (position in our case) through the combination of measurements from various sensors in order to mitigate noise The robot-localization package in ROS provides an implementation of an Extended Kalman Filter that has popular support and can be integrated into our navigation system. Surprisingly however, we found that the Kalman Filter we employed produced a slightly worse position estimate than one derived from our Odometry alone. This may be due to the linear acceleration slight bias that was inescapable due to the extreme sensitivity of the IMU sensor even after meticulous calibration. Thus, until we fuse our readings with ground truth GPS data, we will ignore the linear acceleration of the IMU within the Kalman Filter. Future work will be to implement and analyze an Unscented Kalman Filter, which is an advancement upon the base model and further investigate IMU noise compensation.
 
 ## Noise Reduction Strategies
 
-We researched several Noise Reduction approaches to attempt in migating the noise and bias that was affecting some of our IMU data readings, especially in Linear Acceleration. By applying Signal Processing techniques such as Low Pass Filter (which removes high frequency noise of a signal), Median Filter 
+We researched several Noise Reduction approaches to attempt in migating the noise and bias that was affecting some of our IMU data readings, especially in Linear Acceleration. By applying Signal Processing techniques such as Low Pass Filter (which removes high frequency noise of a signal), Median Filter (which smoothens a signal by applying the median across a sliding window), and Haar Wavelets (decomposition and reconstruction of signal to remove high frequency noise) we saw that while these approaches did mitigate the noise, it could not remedy the slight bias present in the IMU acceleration data even after meticulous calibration. We will next work to utilize an Allan Variance test to characterize the type of noise and bias instability. Then, we will further explore methods to compensate for the slight bias, especially in the acceleration readings.
 
-## Kalman Filter 
 
-We utilized a Kalman Filter to fuse our IMU and Odometry readings to produce an enhanced position estimate and 
+## Discussion 
 
-## OAK camera
+After calibrating and analyzing the Sparkfun OLA Artemis we were able to gain a strong understanding in several areas that will allow us to improve the accuracy of our IMU data and Heading derivation. Initially, we struggled with integration issues with our Sparkfun OLA Artemis IMU to our Jetson onboard computer and ROS. However, learning to reach out in the community and then give back has built our confidence in actively participating and growing within a larger network of robotocists. We then witnessed how the mounting setup can have a large effect on the IMU noise and reliability of data due to it being an extremely sensitive piece of hardware. We also saw the effects of the calibration procedure (which we developed a guide for!) and how strong of an negative influence the magnetic distortions onboard our robot can have on our Heading. Since the IMU is so sensitive, even after diligent calibration there is still a slight bias in acceleration values. The Kalman Filter that was primarily supposed to better our Position Estimate and Heading surprisingly performed worse most likely due to this, however led us to search for new ways to compensate for noise and bias.  After exploring popular signal processing techniques, we found some success, yet would like to next employ an Allan Variance test and further research to better address this. Finally, we would like to integrate to our larger 1/5 Rally Car and potentially race it at the Thunderhill Raceway Track in Northern California. 
+
+
+Thanks for reading and to our Professor Jack Silberman for giving us the opportunity to continue learning and devloping our data science and robotics knowledge!
+ 
