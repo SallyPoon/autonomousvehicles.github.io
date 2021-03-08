@@ -65,28 +65,27 @@ Overall the mounting strategies shined light on the extreme sensitivity of the I
 It was crucial to calibrate our IMU to obtain the most accurate readings so that they could be relied upon by our robot's navigational stack. 
 To do this we calibrated the accelerometer for gravitation force in all 3 axes at rest, the gyroscope noise levels at rest, and the magnetic disortions present in the environment at rest. The magnetometer provided the most difficulty in calibration. This is because there are often strong magnetic distortions caused by the metal hardware, magnetized components, motors, etc.. 
 
-We analyzed 3 best calibration settings (found through extendend testing of parameters in each condition) for the Heading (Yaw) while driving a straight line path headed West (90 deg). The settings were calibrating acceloremeter+gyroscope, accel+gyro+standard magnetometer technique, and accel+gyro+extended magnetometer technique. We found that the extended magnetometer calibration technique was a critical factor in providing accurate Heading estimates and reducing error, also giving us insight into how large of a factor magnetic distortions onboard our robot can intefere with our IMU data. 
+We analyzed 3 best calibration settings (found through extendend testing of parameters in each condition) for the Heading (Yaw) while driving a straight line path headed West (90 deg). The settings were calibrating acceloremeter+gyroscope, accel+gyro+standard magnetometer technique, and accel+gyro+extended magnetometer technique. 
 
 ### Straight Line Heading Test
-<p align="center">
-  <img align = "center" width=900" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232439-81bfe180-7ed2-11eb-9278-6cda91a422bf.png">
-</p>
+![Screen Shot 2021-03-06 at 11 20 06 PM](https://user-images.githubusercontent.com/43420182/110270674-2bf34400-7f7b-11eb-9dcc-29634ca284e9.png)
+
 
 ### Half Arc Heading Test
 We then repeated this test except conducted a Half Arc 180 degree turn from West to East. The findings solidified our previous results by proper magnetometer calibration producing the least error. 
 
-<p align="center">
-  <img align = "center" width=900" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232546-1b878e80-7ed3-11eb-84be-53ee10b34764.png">
-</p>
+![Screen Shot 2021-03-04 at 6 48 56 PM](https://user-images.githubusercontent.com/43420182/110270691-37df0600-7f7b-11eb-95f2-b0212f9e4821.png)
 
-Now that we established and analyzed a proper calibration procedure, here were the results!
+We found that the extended magnetometer calibration technique was a critical factor in providing accurate Heading estimates and reducing error, also giving us insight into how large of a factor magnetic distortions onboard our robot can intefere with our IMU data. 
 
-# 180 Degree Heading Turn 
+*Now that we established and analyzed a proper calibration procedure, here were the results!*
+
+## 180 Degree Heading Turn 
 Here is a successful 180 degree turn with our Heading from West to East (90 degrees to -90 degrees)!
 
 ![west_to_east_180](https://user-images.githubusercontent.com/43420182/110262143-91d5d080-7f67-11eb-88c9-a58c4daae19a.gif)
 
-# 360 Degree Heading Turn 
+## 360 Degree Heading Turn 
 And now a successful 360 degree turn with our Heading starting at West (90 degrees) and returning there!
 
 ![0_to_360](https://user-images.githubusercontent.com/43420182/110262222-dcefe380-7f67-11eb-9995-213f507cefe9.gif)
