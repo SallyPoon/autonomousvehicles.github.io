@@ -8,13 +8,14 @@ permalink: imu/
 ### What exactly is an IMU? 
 An IMU is a sensor that has an inbuilt accelerometer, gyroscope, and magenetometer and allows us to derive better relative position and orientation measurements for our robot. With this sensor we are able to measure Linear Acceleration, Angular Velocity, and sense Magnetic Fields and distortions in the X,Y, and Z axes. 
 
-IMUs are commonly used in most electronic devices and vehicles, such as robots, missiles, and even in your smartphone! 
+IMUs are commonly used in most electronic devices and vehicles, such as jets, missiles, and even in your smartphone! 
 
-<p align="center">
-  <img align = "center" width="500" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232018-eded1600-7ecf-11eb-9d36-b3df82ed6c85.png">
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/43420182/110232018-eded1600-7ecf-11eb-9d36-b3df82ed6c85.png" width="400" />
+  <img src="https://user-images.githubusercontent.com/43420182/110261070-87b1d300-7f63-11eb-8931-92191b855f63.png" width="400" /> 
 </p>
 
-We utilized our IMU to primarily derive a Compass Heading (Yaw) for our robot so it could establish its orientation in a global context. 
+We utilized our IMU to primarily derive a Heading (Yaw) for our robot so it could establish its orientation in a global context. 
 
 ## Sparkfun Openlog Artemis IMU & ROS Integration
 
@@ -36,7 +37,7 @@ We analyzed 3 major calibration settings (after finetuning variety of parameters
 We found that the extended magnetometer calibration technique was a critical factor in providing accurate Heading estimates and reducing error, also giving us insight into how large of a factor magnetic distortions onboard our robot can intefere with our IMU data. 
 
 <p align="center">
-  <img align = "center" width=900" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232439-81bfe180-7ed2-11eb-9278-6cda91a422bf.png">
+  <img align = "center" width=400" alt="Odomdf" src="https://user-images.githubusercontent.com/43420182/110232439-81bfe180-7ed2-11eb-9278-6cda91a422bf.png">
 </p>
 
 We then repeated this test except conducted a Half Arc 180 degree turn from West to East. The findings solidified our previous results by proper magnetometer calibration producing the least error. 
