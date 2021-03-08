@@ -98,7 +98,17 @@ used to obtain the best estimate of states (position in our case) through the co
 
 ## Noise Reduction Strategies
 
-We researched several Noise Reduction approaches to attempt in migating the noise and bias that was affecting some of our IMU data readings, especially in Linear Acceleration. By applying Signal Processing techniques such as Low Pass Filter (which removes high frequency noise of a signal), Median Filter (which smoothens a signal by applying the median across a sliding window), and Haar Wavelets (decomposition and reconstruction of signal to remove high frequency noise) we saw that while these approaches did mitigate the noise, it could not remedy the slight bias present in the IMU acceleration data even after meticulous calibration. We will next work to utilize an Allan Variance test to characterize the type of noise and bias instability. Then, we will further explore methods to compensate for the slight bias, especially in the acceleration readings.
+We researched several Noise Reduction approaches to attempt in migating the noise and bias that was affecting some of our IMU data readings, especially in Linear Acceleration. We applied Signal Processing techniques such as Low Pass Filter (which removes high frequency noise of a signal), Median Filter (which smoothens a signal by applying the median across a sliding window), and Haar Wavelets (decomposition and reconstruction of signal to remove high frequency noise) for signal noise mitigation. 
+
+<img src="https://user-images.githubusercontent.com/43420182/110271244-70cbaa80-7f7c-11eb-8d82-f8df0fec29f3.png" alt="drawing" width="200"/>
+
+<img src="https://user-images.githubusercontent.com/43420182/110271241-6f9a7d80-7f7c-11eb-8876-ff3e92188162.png" alt="drawing" width="400"/>
+
+![Screen Shot 2021-03-07 at 7 04 10 PM](https://user-images.githubusercontent.com/43420182/110271240-6e695080-7f7c-11eb-9397-d4a5c0a90a5a.png)
+
+We saw that while these approaches did mitigate the noise, it could not remedy the slight bias present in the IMU acceleration data even after meticulous calibration. We will next work to utilize an Allan Variance test to characterize the type of noise and bias instability. Then, we will further explore methods to compensate for the slight bias, especially in the acceleration readings.
+
+![Screen Shot 2021-03-06 at 1 04 16 AM](https://user-images.githubusercontent.com/43420182/110271225-68736f80-7f7c-11eb-805d-3e193e6c3d3a.png)
 
 ## Discussion 
 
