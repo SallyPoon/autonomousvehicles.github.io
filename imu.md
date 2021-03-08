@@ -86,7 +86,7 @@ Here is a successful 180 degree turn with our Heading from West to East (90 degr
 ![west_to_east_180](https://user-images.githubusercontent.com/43420182/110262143-91d5d080-7f67-11eb-88c9-a58c4daae19a.gif)
 
 ## 360 Degree Heading Turn 
-And now a successful 360 degree turn with our Heading starting at West (90 degrees) and returning there!
+And now a successful 360 degree turn with our Heading starting at North (0 degrees) and returning there!
 
 ![0_to_360](https://user-images.githubusercontent.com/43420182/110262222-dcefe380-7f67-11eb-9995-213f507cefe9.gif)
 
