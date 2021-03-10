@@ -86,11 +86,11 @@ After this, if we got a distance that overshot, we decreased the speed to electr
 For this part, we followed a guide from MushR. To test the steering angle to server gain, we had to also have a tape measure and see the best value by running the car over and over. We had a tape measure go out to around 2.5m, then had set the back wheels to the beginning of the tape measure in a direction that makes it a T shape. To calculate what we needed as our arc, we needed to use
 
 <p align="center">
-  <img width="120" alt="image" src="https://user-images.githubusercontent.com/13074631/110571634-af906a80-810c-11eb-85f6-dd092c31dbf4.png">
+  <img width="248" alt="image" src="https://user-images.githubusercontent.com/13074631/110571828-131a9800-810d-11eb-8d82-87d81a8c09ce.png">
 </p>
 
 <p align="center">
-  <img width="164" alt="image" src="https://user-images.githubusercontent.com/13074631/110571700-cafb7580-810c-11eb-8eca-ed2ed930a441.png">
+  <img width="344" alt="image" src="https://user-images.githubusercontent.com/13074631/110571851-1b72d300-810d-11eb-800b-9f65c771445c.png">
 </p>
 
 For our car the length is 0.475 and the maximum steering is 0.34. This ends up being around 2.44m. To do this test, we had to change the steering to erpm gain variable. The values had to be negative because if we set a positive steering to erpm gain, it would invert the turn. 
